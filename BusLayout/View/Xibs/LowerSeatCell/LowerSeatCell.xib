@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LowerSeatCellID" id="gTV-IL-0wX" customClass="LowerSeatCell" customModule="BusLayout" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="119" height="135"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="119" height="135"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gcl-RL-TjN">
+                        <rect key="frame" x="5" y="5" width="109" height="125"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lower_seat" translatesAutoresizingMaskIntoConstraints="NO" id="Hqi-DC-abv">
+                                <rect key="frame" x="5" y="5" width="99" height="100"/>
+                                <color key="tintColor" name="AppThemeColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dpt-0O-KVM">
+                                <rect key="frame" x="46.666666666666664" y="105" width="19.666666666666664" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="iqL-0x-Xyz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dpt-0O-KVM" firstAttribute="centerX" secondItem="Hqi-DC-abv" secondAttribute="centerX" constant="2" id="7nc-ca-AOB"/>
+                            <constraint firstAttribute="trailing" secondItem="Hqi-DC-abv" secondAttribute="trailing" constant="5" id="GIA-pp-AVi"/>
+                            <constraint firstItem="Dpt-0O-KVM" firstAttribute="top" secondItem="Hqi-DC-abv" secondAttribute="bottom" id="iVH-Jh-hji"/>
+                            <constraint firstAttribute="bottom" secondItem="Dpt-0O-KVM" secondAttribute="bottom" constant="5" id="lIL-J7-NOz"/>
+                            <constraint firstItem="Hqi-DC-abv" firstAttribute="top" secondItem="Gcl-RL-TjN" secondAttribute="top" constant="5" id="ses-vS-LqQ"/>
+                            <constraint firstItem="Hqi-DC-abv" firstAttribute="leading" secondItem="Gcl-RL-TjN" secondAttribute="leading" constant="5" id="wP3-db-f2X"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Gcl-RL-TjN" secondAttribute="bottom" constant="5" id="eEP-8Y-BLd"/>
+                <constraint firstItem="Gcl-RL-TjN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="etF-wi-rjL"/>
+                <constraint firstItem="Gcl-RL-TjN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="fNW-xq-Gsa"/>
+                <constraint firstAttribute="trailing" secondItem="Gcl-RL-TjN" secondAttribute="trailing" constant="5" id="gTe-vM-BWY"/>
+            </constraints>
+            <size key="customSize" width="119" height="135"/>
+            <connections>
+                <outlet property="seatImg" destination="Hqi-DC-abv" id="rU0-eU-wS0"/>
+                <outlet property="seatNumberLbl" destination="Dpt-0O-KVM" id="ntU-50-znU"/>
+            </connections>
+            <point key="canvasLocation" x="191.6030534351145" y="49.647887323943664"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="lower_seat" width="200" height="200"/>
+        <namedColor name="AppThemeColor">
+            <color red="1" green="0.74699997901916504" blue="0.15899999439716339" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
